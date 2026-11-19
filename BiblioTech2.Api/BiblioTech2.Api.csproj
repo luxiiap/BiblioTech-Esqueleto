@@ -31,8 +31,6 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Middleware\" />
     <Folder Include="Models\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
 </Project>
