@@ -58,7 +58,8 @@ public class AutorService(BibliotecaContext db) : IAutorService
     public async Task<bool> ActualizarAsync(int id, AutorGuardarDto dto)
     {
         var autor = await db.Autores.FindAsync(id);
-        if (autor is null) return false;
+        if (autor is null)
+            return false;
 
         autor.Nombre = dto.Nombre.Trim();
         autor.Nacionalidad = string.IsNullOrWhiteSpace(dto.Nacionalidad) ? null : dto.Nacionalidad.Trim();
@@ -67,10 +68,11 @@ public class AutorService(BibliotecaContext db) : IAutorService
         return true;
     }
 
-    public async Task<bool> EliminarAsync(int id)
+    public async Task<bool>EliminarAsync(int id)
     {
         var autor = await db.Autores.FindAsync(id);
-        if (autor is null) return false;
+        if (autor is null)
+            return false;
 
         db.Autores.Remove(autor);
         await db.SaveChangesAsync();   // DELETE
