@@ -26,12 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Constants\" />
     <Folder Include="Configuracion\" />
-    <Folder Include="Exceptions\" />
     <Folder Include="Middleware\" />
     <Folder Include="Models\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>
